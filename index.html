@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the latest fashion trends at Fashion Store.">
+
+    <title>Fashion Store | Modern Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Free Shipping on Orders Over ৳2000
+    </div>
+
+
+    <!-- Header -->
+    <header class="header">
+
+        <a href="#home" class="logo">
+            FASHION<span>.</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#new-products" class="nav-link">New Products</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+
+        <div class="header-actions">
+
+            <!-- Menu -->
+            <div class="menu-wrapper">
+
+                <button
+                    class="header-menu-btn"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    <span>☰</span> Menu
+                </button>
+
+                <div class="category-dropdown" id="category-dropdown">
+
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#new-products">New Products</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Header Search -->
+            <div class="header-search-box">
+
+                <button
+                    id="search-toggle"
+                    type="button"
+                    aria-label="Search"
+                >
+                    ⌕
+                </button>
+
+                <input
+                    type="search"
+                    id="product-search"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="clear-search"
+                    type="button"
+                    aria-label="Clear search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Wishlist -->
+            <a href="pages/wishlist.html" aria-label="Wishlist">
+                ♡
+            </a>
+
+            <!-- Shopping Cart -->
+            <a href="pages/cart.html" aria-label="Shopping cart">
+                🛍
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+
+        <!-- ================================= -->
+        <!-- HOME PAGE -->
+        <!-- ================================= -->
+
+        <section class="page-section active" id="home">
+
+            <!-- Hero Section -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <p class="hero-subtitle">
+                        NEW SEASON COLLECTION 2026
+                    </p>
+
+                    <h1>
+                        Style That<br>
+                        Defines You.
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover timeless fashion and express your
+                        personality with our latest collections.
+                    </p>
+
+                    <a href="#products" class="shop-btn">
+                        SHOP NOW <span>→</span>
+                    </a>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000"
+                        alt="Fashion model wearing modern clothing"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- Categories Section -->
+            <section class="categories section" id="categories">
+
+                <div class="section-heading">
+
+                    <p>EXPLORE COLLECTIONS</p>
+                    <h2>Shop By Category</h2>
+
+                </div>
+
+                <div class="category-grid">
+
+                    <!-- Men -->
+                    <a href="#products" class="category-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=700"
+                            alt="Men's fashion"
+                        >
+
+                        <span>MEN'S COLLECTION →</span>
+
+                    </a>
+
+
+                    <!-- Women -->
+                    <a href="#products" class="category-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700"
+                            alt="Women's fashion"
+                        >
+
+                        <span>WOMEN'S COLLECTION →</span>
+
+                    </a>
+
+
+                    <!-- Accessories -->
+                    <a href="#products" class="category-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700"
+                            alt="Fashion accessories"
+                        >
+
+                        <span>ACCESSORIES →</span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- About Section -->
+            <section class="about section" id="about">
+
+                <p>OUR PHILOSOPHY</p>
+
+                <h2>
+                    Fashion is not just what you wear.<br>
+                    It's who you are.
+                </h2>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- PRODUCTS PAGE -->
+        <!-- ================================= -->
+
+        <section class="page-section" id="products">
+
+            <section class="products section">
+
+                <div class="section-heading">
+
+                    <p>EXPLORE OUR COLLECTION</p>
+                    <h2>All Products</h2>
+
+                </div>
+
+
+                <!-- Product Toolbar -->
+                <div class="product-toolbar">
+
+                    <!-- Hidden Category Filter -->
+                    <div class="filter-control">
+
+                        <select
+                            id="category-filter"
+                            aria-label="Category filter"
+                            hidden
+                        >
+
+                            <option value="all">All Categories</option>
+                            <option value="Men">Men</option>
+                            <option value="Women">Women</option>
+                            <option value="Accessories">Accessories</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Sorting -->
+                    <div class="filter-control">
+
+                        <select id="sort-filter" aria-label="Sort products">
+
+                            <option value="default">Default Sorting</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name-asc">Name: A to Z</option>
+                            <option value="name-desc">Name: Z to A</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product Result Information -->
+                <div class="product-result-info">
+
+                    <p id="product-count">
+                        Showing 30 products
+                    </p>
+
+                    <button id="reset-filters" type="button">
+                        Reset Filters ↻
+                    </button>
+
+                </div>
+
+
+                <!-- All Products Container -->
+                <div class="product-grid" id="product-container">
+
+                    <!-- Products loaded by JavaScript -->
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- NEW PRODUCTS PAGE -->
+        <!-- ================================= -->
+
+        <section class="page-section" id="new-products">
+
+            <section class="products section">
+
+                <div class="section-heading">
+
+                    <p>JUST DROPPED</p>
+                    <h2>New Arrivals</h2>
+
+                </div>
+
+
+                <!-- New Products Container -->
+                <div class="product-grid" id="new-product-container">
+
+                    <!-- New products loaded by JavaScript -->
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- CONTACT PAGE -->
+        <!-- ================================= -->
+
+        <section class="page-section" id="contact">
+
+            <section class="section contact-section">
+
+                <div class="section-heading">
+
+                    <p>GET IN TOUCH</p>
+                    <h2>Contact Us</h2>
+
+                </div>
+
+                <div class="contact-content">
+
+                    <h3>We Would Love to Hear From You</h3>
+
+                    <p>
+                        Have a question about our products or need help
+                        with your order? Feel free to contact us.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="footer">
+
+                <a href="#home" class="logo">
+                    FASHION<span>.</span>
+                </a>
+
+                <p>Discover Your Own Style.</p>
+
+                <p>
+                    © 2026 Fashion Store. All Rights Reserved.
+                </p>
+
+            </footer>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
